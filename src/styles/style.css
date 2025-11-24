@@ -1,0 +1,267 @@
+body {
+    font-family: "Roboto" ,sans-serif;
+}
+
+/* Header Section */
+
+.logo-orion {
+    height: 64px;
+}
+
+.header-icon {
+    width: 32px;
+    transition: transform .2s ease-in-out;
+}
+
+.header-icon:hover {
+    transform: scale(1.2);
+}
+
+.nav-mobile {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main Section */
+
+.main {
+    padding: 5%;
+}
+
+/* Tecnologias Section */
+
+.title {
+    height: 128px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Carrousel Logos Section */
+
+.carousel {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    padding: 20px 0;
+    margin-bottom: 3rem;
+
+    /* Best Suppot mask (Buscar mejor descripcion) */
+    -webkit-mask-image: linear-gradient(to right,   /* Mask for the transparent at the beginning and the end */
+            transparent,
+            rgba(0, 0, 0, 1) 20%,
+            rgba(0, 0, 0, 1) 80%,
+            transparent);
+
+    /* Common mask */
+    mask-image: linear-gradient(to right,  /* Mask for the transparent at the beginning and the end */
+            transparent,
+            rgba(0, 0, 0, 1) 20%,
+            rgba(0, 0, 0, 1) 80%,
+            transparent);
+}
+
+.scroll-controller {
+    display: flex;
+    width: max-content;
+    animation: scroll 20s linear infinite;
+}
+
+.carousel-logo {
+    height: 64px;
+    margin-right: 132px;
+    filter: drop-shadow(0 0 5px #000000);
+    transition: transform .2s ease;
+    cursor: pointer;
+}
+
+.carousel-logo:hover {
+    transform: scale(1.1);
+}
+
+/* Control the displacement in x */
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-50%));
+    }
+}
+
+/* Video Section */
+
+.video {
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-img {
+    height: 100%;
+    border-radius: 8px;
+}
+
+.video-size {
+    width: 20vw;
+    height: 60vh;
+}
+
+/* Cards Section */
+
+.cards {
+    padding: 1.5rem;
+    margin: 1.5rem;
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    justify-content: center;
+    align-items: center;
+}
+
+.color-card {
+    background-color: #00aef0;
+    color: #e4e9ef;
+}
+
+.card-size {
+    width: 18rem;
+}
+
+.cards-group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.card-img {
+    height: 192px;
+    border-radius: 6px 6px 0 0 ;
+}
+
+.bg-flower {
+    width: 100%;
+    background-color: #000;
+    border-radius: 6px 6px 0 0 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flower {
+    object-fit: contain;
+    height: 192px;
+}
+
+/* Flip */
+
+.flip-card {
+    background-color: transparent;
+    perspective: 1000px; /* Important for the 3D efect */
+    width: 18rem;
+    height: 18rem;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s ease-in-out;
+    transform-style: preserve-3d;
+}
+
+/* Hover flip the card */
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Front and Back */
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hide the front when is back */
+    border-radius: 6px;
+}
+
+/* FRONT */
+
+.flip-card-front {
+    z-index: 2;
+    transform: rotateY(0deg);
+}
+
+/* BACK */
+
+.flip-card-back {
+    transform: rotateY(180deg);
+    background-color: #2C8BB0;  
+    color: rgb(228, 225, 225);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+/* Form */
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-size {
+    width: 50%;
+}
+
+.form-hover {
+    transition: transform .2s ease-in-out;
+}
+
+.form-hover:hover{
+    transform: scale(1.03);
+}
+
+/* Footer Section */
+
+.footer {
+    height: 90px;
+    justify-content: center;
+    font-size: 2em;
+    display: flex;
+    flex-direction: row;
+}
+
+.icon-list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    margin-top: 0.8em;
+    gap: 36px;
+}
+
+.icon-colors {
+    color: #00aef0;
+}
+
+.foot-icon {
+    transition: transform .2s ease-in;
+}
+
+.foot-icon:hover {
+    transform: scale(1.2);
+}

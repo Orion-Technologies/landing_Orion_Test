@@ -1,0 +1,15 @@
+{
+  "name": "orion-landing",
+  "version": "1.0.0",
+  "description": "Estilos para landing page Orion",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass src/scss/style.scss src/styles/style.css -w"
+  },
+  "author": "Angel Alfaro",
+  "license": "MIT",
+  "devDependencies": {
+    "bootstrap": "^5.3.8",
+    "sass": "^1.93.3"
+  }
+}
